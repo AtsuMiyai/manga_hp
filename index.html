@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manga109 — Japanese Manga Dataset</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;500;700;900&family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="logo-mark">M<span class="logo-accent">109</span></span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#us">Us</a></li>
+      <li><a href="#annotations">Annotations</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#download">Download</a></li>
+      <li class="nav-lang"><a href="en.html"><span class="lang-active">JA</span> / <span class="lang-inactive">EN</span></a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-bg">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">日本漫画 × 学術研究データセット</div>
+    <h1 class="hero-title">
+      <span class="hero-line">Manga</span>
+      <span class="hero-line hero-number">109</span>
+    </h1>
+    <p class="hero-sub">
+      A dataset of <strong>109</strong> Japanese comic volumes<br>
+      for academic research in manga media processing.
+    </p>
+    <p class="hero-sub-ja">
+      東京大学 相澤・山崎・松井研究室が構築する、日本漫画の学術研究向けデータセット
+    </p>
+    <div class="hero-actions">
+      <a href="#download" class="btn btn-primary">
+        <span>Download Dataset</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v14m0 0l-6-6m6 6l6-6"/><path d="M5 21h14"/></svg>
+      </a>
+      <a href="#explore" class="btn btn-ghost">Explore →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">109</span>
+        <span class="stat-label">Volumes</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">21,142</span>
+        <span class="stat-label">Pages</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">1970s→</span>
+        <span class="stat-label">Era Coverage</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">87</span>
+        <span class="stat-label">Manga109-s</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Gallery Strip -->
+<section class="gallery">
+  <div class="gallery-track">
+    <div class="gallery-row" id="row1"></div>
+    <div class="gallery-row gallery-row-reverse" id="row2"></div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section section-about">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">01 / About</span>
+      <h2 class="section-title">A curated dataset<br>for manga research.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          このデータセット（<strong>Manga109</strong>）は，日本漫画のメディア処理の学術研究使用のために，東京大学 大学院情報理工学系研究科 電子情報学専攻 <strong>相澤・山崎・松井研究室</strong>によりとりまとめられました．
+        </p>
+        <p>
+          Manga109は，日本のプロの漫画家によって描かれた <strong>109冊の漫画</strong>で構成されています．1970年代から2010年代に公開された漫画であり，対象読者層やジャンルも幅広く網羅しています．収録されている漫画のほとんどは，<a href="http://www.mangaz.com/" target="_blank" rel="noopener">マンガ図書館Z</a>にて公開されています．
+        </p>
+        <p>
+          Manga109は，<strong>非営利機関での学術利用</strong>に限るという条件で研究利用の許諾を作者から得ています．さらに，109冊のうちの87冊については営利機関での利用の許諾も得ており，これを <strong>Manga109-s</strong> という名称で提供しています．
+        </p>
+      </div>
+      <div class="about-card">
+        <div class="card-label">At a glance</div>
+        <dl class="kv">
+          <dt>Provider</dt><dd>Aizawa-Yamasaki-Matsui Lab, UTokyo</dd>
+          <dt>Volumes</dt><dd>109 (Manga109) / 87 (Manga109-s)</dd>
+          <dt>Period</dt><dd>1970s – 2010s</dd>
+          <dt>Source</dt><dd>マンガ図書館Z</dd>
+          <dt>License</dt><dd>Academic (non-commercial)</dd>
+        </dl>
+        <a href="#download" class="card-cta">Request access →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Impact -->
+<section id="impact" class="section section-paper">
+  <div class="container">
+    <div class="paper-card">
+      <div class="paper-left">
+        <span class="section-tag">Impact</span>
+        <h3 class="paper-title">Manga109 シリーズの論文は，<br>世界中の研究者に広く引用されています．</h3>
+        <p class="paper-venue">Manga109・Comic Onomatopoeia・Manga109Dialog・MangaUB など関連論文の合算値．</p>
+      </div>
+      <div class="paper-cite">
+        <span class="paper-cite-num">2,200<span class="paper-cite-plus">+</span></span>
+        <span class="paper-cite-label">Series Total<br><span class="paper-cite-sub">Citations</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Us / Team -->
+<section id="us" class="section section-us">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">02 / Us</span>
+      <h2 class="section-title">The people<br>behind Manga109.</h2>
+    </div>
+    <div class="team-intro">
+      <p>
+        Manga109 は，以前は <a href="https://www.hal.t.u-tokyo.ac.jp/lab/ja/index_1.xhtml" target="_blank" rel="noopener">相澤・山崎・松井研究室</a>（Aizawa-Yamasaki-Matsui Lab）のメンバーによって運営されていました．
+      </p>
+      <p>現在の運営メンバーは以下の通りです．</p>
+    </div>
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="team-photo"><img src="asset/organizer/kiyoharu_Aizawa.png" alt="相澤清晴 / Kiyoharu Aizawa"></div>
+        <h3>相澤 清晴<span class="team-name-en">Kiyoharu Aizawa</span></h3>
+        <p class="team-role">名誉教授</p>
+        <p class="team-affil">東京大学</p>
+        <a class="team-link" href="https://scholar.google.co.jp/citations?hl=ja&user=CJRhhi0AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Scholar →</a>
+      </article>
+      <article class="team-card">
+        <div class="team-photo"><img src="asset/organizer/Hikaru_Ikuta.png" alt="幾田光 / Hikaru Ikuta"></div>
+        <h3>幾田 光<span class="team-name-en">Hikaru Ikuta</span></h3>
+        <p class="team-role">エンジニア</p>
+        <p class="team-affil">Mantra</p>
+        <a class="team-link" href="https://woodrush.github.io/" target="_blank" rel="noopener">Homepage →</a>
+      </article>
+      <article class="team-card">
+        <div class="team-photo"><img src="asset/organizer/Jeonghun_Baek.png" alt="白定勳 / Jeonghun Baek"></div>
+        <h3>白 定勳<span class="team-name-en">Jeonghun Baek</span></h3>
+        <p class="team-role">助教</p>
+        <p class="team-affil">東京大学</p>
+        <a class="team-link" href="https://jeonghunbaek.notion.site/Jeonghun-Baek-5e50812ade674698bdffe7f4eac5c745" target="_blank" rel="noopener">Homepage →</a>
+      </article>
+      <article class="team-card">
+        <div class="team-photo"><img src="asset/organizer/Atsuyuki_Miyai.jpg" alt="宮井淳行 / Atsuyuki Miyai"></div>
+        <h3>宮井 淳行<span class="team-name-en">Atsuyuki Miyai</span></h3>
+        <p class="team-role">博士課程学生</p>
+        <p class="team-affil">東京大学</p>
+        <a class="team-link" href="https://atsumiyai.github.io/" target="_blank" rel="noopener">Homepage →</a>
+      </article>
+      <article class="team-card">
+        <div class="team-photo"><img src="asset/organizer/Sota_Onohara.png" alt="小野原菖太 / Shota Onohara"></div>
+        <h3>小野原 菖太<span class="team-name-en">Shota Onohara</span></h3>
+        <p class="team-role">修士学生</p>
+        <p class="team-affil">東京大学</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Annotations / Features -->
+<section id="annotations" class="section section-features">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">03 / Annotations</span>
+      <h2 class="section-title">Rich annotations<br>beyond raw images.</h2>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <div class="feature-num">01</div>
+        <h3>Manga109</h3>
+        <p>キャラクター・顔・フレーム・テキストの<br>バウンディングボックスアノテーション．</p>
+        <span class="feature-pill">Core</span>
+      </article>
+      <article class="feature-card">
+        <div class="feature-num">02</div>
+        <h3>Comic Onomatopoeia</h3>
+        <p>漫画のオノマトペ（擬音・擬態語）<br>専用のアノテーションデータセット．</p>
+        <span class="feature-pill">COO</span>
+      </article>
+      <article class="feature-card">
+        <div class="feature-num">03</div>
+        <h3>Manga109Dialog</h3>
+        <p>漫画の発話者を特定した<br>セリフ・話者対応データセット．</p>
+        <span class="feature-pill">Dialog</span>
+      </article>
+      <article class="feature-card">
+        <div class="feature-num">04</div>
+        <h3>MangaUB</h3>
+        <p>Manga Understanding Benchmark<br>for Large Multimodal Models.</p>
+        <span class="feature-pill">Benchmark</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- News -->
+<section id="news" class="section section-news">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">04 / News</span>
+      <h2 class="section-title">Latest updates.</h2>
+    </div>
+    <ol class="news-list">
+      <li>
+        <time>2023.12</time>
+        <p>一部破損画像が含まれていたため，これらを修正した改訂版を公開しました．</p>
+      </li>
+      <li>
+        <time>2023.12</time>
+        <p>漫画のコマ閲覧時間データセット（実験により計測）が公開されました．</p>
+      </li>
+      <li>
+        <time>2023.06</time>
+        <p>漫画の発話者データセット（Manga109Dialog）が公開されました．</p>
+      </li>
+      <li>
+        <time>2022.08</time>
+        <p>オノマトペデータセット（Comic Onomatopoeia）が公開されました．</p>
+      </li>
+      <li>
+        <time>2021.12</time>
+        <p>重複画像の削除とバウンディングボックスを修正した改訂版を公開．</p>
+      </li>
+      <li>
+        <time>2020.12</time>
+        <p>アノテーションの誤りを修正した改訂版を公開しました．</p>
+      </li>
+      <li>
+        <time>2018.09</time>
+        <p>アノテーションデータ読み込み用の Python API <a href="https://github.com/manga109/manga109api" target="_blank" rel="noopener">manga109api</a> を公開．</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Download CTA -->
+<section id="download" class="section section-cta">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-left">
+        <span class="section-tag">05 / Get started</span>
+        <h2>Ready to dive into<br>109 volumes of manga?</h2>
+        <p>研究用途に応じて Manga109 / Manga109-s をお選びください．</p>
+      </div>
+      <div class="cta-right">
+        <a href="https://huggingface.co/datasets/hal-utokyo/Manga109" target="_blank" rel="noopener" class="cta-btn">
+          <div class="cta-btn-title">Manga109</div>
+          <div class="cta-btn-desc">非営利・学術利用 · 109 volumes · Hugging Face</div>
+        </a>
+        <a href="https://huggingface.co/datasets/hal-utokyo/Manga109-s" target="_blank" rel="noopener" class="cta-btn">
+          <div class="cta-btn-title">Manga109-s</div>
+          <div class="cta-btn-desc">営利利用可 · 87 volumes · Hugging Face</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-mark logo-mark-lg">M<span class="logo-accent">109</span></div>
+        <p>Japanese Manga Dataset<br>for academic research.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Dataset</h4>
+        <ul>
+          <li><a href="https://huggingface.co/datasets/hal-utokyo/Manga109" target="_blank" rel="noopener">Manga109</a></li>
+          <li><a href="https://huggingface.co/datasets/hal-utokyo/Manga109-s" target="_blank" rel="noopener">Manga109-s</a></li>
+          <li><a href="#annotations">Annotations</a></li>
+          <li><a href="#us">Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Publications</a></li>
+          <li><a href="https://github.com/manga109/manga109api" target="_blank" rel="noopener">manga109api</a></li>
+          <li><a href="#">Others</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p class="footer-contact">
+          エラー報告・お問い合わせ:<br>
+          <span class="mono">support_comic(a)hal.t.u-tokyo.ac.jp</span>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <a href="https://www.hal.t.u-tokyo.ac.jp/lab/" target="_blank" rel="noopener">Aizawa Yamasaki Matsui Lab</a>, The University of Tokyo.</p>
+      <p class="footer-credits">Data Powered by <a href="http://www.mangaz.com/" target="_blank" rel="noopener">マンガ図書館Z</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@ if (navToggle) {
   navToggle.addEventListener('click', () => navMenu.classList.toggle('open'));
 }
 
-// ---- 109 manga titles (from asset/manga_name.txt) ----
+// ---- 109 manga titles (folder names, from asset/manga_name.txt) ----
 const MANGA_TITLES = [
   'ARMS','AisazuNihaIrarenai','AkkeraKanjinchou','Akuhamu','AosugiruHaru',
   'AppareKappore','Arisa','BEMADER_P','BakuretsuKungFuGirl','Belmondo',
@@ -34,24 +34,7 @@ const MANGA_TITLES = [
   'YouchienBoueigumi','YoumaKourin','YukiNoFuruMachi','YumeNoKayoiji','YumeiroCooking'
 ];
 
-// ---- soft Japanese color palettes for tiles ----
-const palettes = [
-  ['#b7282e', '#e5989b'], // 茜 × 桜鼠
-  ['#165e83', '#a5c9ca'], // 藍 × 水浅葱
-  ['#d9a62e', '#f2d492'], // 山吹 × 鳥の子
-  ['#7b8d42', '#c9d6a8'], // 抹茶 × 若苗
-  ['#86604a', '#d4b996'], // 胡桃 × 薄茶
-  ['#5d3f6a', '#b38bb8'], // 紫苑 × 藤
-  ['#d35e60', '#f4cccc'], // 珊瑚 × 撫子
-  ['#3a6b35', '#a8c3a1'], // 松葉 × 柳
-  ['#b56576', '#e8c8cf'], // 長春 × 一斤染
-  ['#4a6fa5', '#b4c5e4'], // 縹 × 瓶覗
-  ['#c96f4a', '#f1b98c'], // 黄丹 × 洗柿
-  ['#2f4858', '#8fa3ad'], // 濃藍 × 灰青
-];
-
 function formatTitle(t) {
-  // CamelCase → spaced; trim _volXX for compact display
   const cleaned = t.replace(/_vol\d+$/i, '');
   return cleaned.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/_/g, ' ');
 }
@@ -60,16 +43,19 @@ function buildRow(id, offset = 0) {
   const row = document.getElementById(id);
   if (!row) return;
   const tiles = [];
-  const count = 24;
+  const count = 28;
   for (let i = 0; i < count; i++) {
     const idx = (i + offset) % MANGA_TITLES.length;
-    const p = palettes[(i + offset) % palettes.length];
-    const title = formatTitle(MANGA_TITLES[idx]);
+    const folder = MANGA_TITLES[idx];
+    const title = formatTitle(folder);
     const num = String(idx + 1).padStart(3, '0');
     tiles.push(
-      `<div class="gallery-tile" style="--c1:${p[0]};--c2:${p[1]}">
-         <span class="tile-num">#${num}</span>
-         <span class="tile-title">${title}</span>
+      `<div class="gallery-tile">
+         <img src="asset/images_crop/${encodeURIComponent(folder)}.jpg" alt="${title}" loading="lazy" onerror="this.remove()">
+         <div class="gallery-tile-meta">
+           <span class="tile-num">#${num}</span>
+           <span class="tile-title">${title}</span>
+         </div>
        </div>`
     );
   }

@@ -63,3 +63,43 @@ function buildRow(id, offset = 0) {
 }
 buildRow('row1', 0);
 buildRow('row2', 37);
+
+// ---- Feature card BibTeX toggle ----
+document.querySelectorAll('.feature-toggle').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const id = btn.getAttribute('aria-controls');
+    const panel = document.getElementById(id);
+    if (!panel) return;
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    panel.hidden = open;
+  });
+});
+
+// ---- BibTeX copy buttons ----
+document.querySelectorAll('.copy-btn').forEach((btn) => {
+  btn.addEventListener('click', async () => {
+    const target = document.getElementById(btn.dataset.target);
+    if (!target) return;
+    const text = target.textContent || '';
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (_) {
+      const range = document.createRange();
+      range.selectNode(target);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      try { document.execCommand('copy'); } catch (__) { /* noop */ }
+      window.getSelection().removeAllRanges();
+    }
+    const label = btn.querySelector('span');
+    const original = label ? label.textContent : '';
+    if (label) label.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      if (label) label.textContent = original;
+    }, 1600);
+  });
+});

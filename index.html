@@ -25,6 +25,7 @@
       <li><a href="#annotations">Annotations</a></li>
       <li><a href="#news">News</a></li>
       <li><a href="publications.html">Publications</a></li>
+      <li><a href="#license">License</a></li>
       <li><a href="#download">Download</a></li>
       <li class="nav-lang"><a href="en.html"><span class="lang-active">JA</span> / <span class="lang-inactive">EN</span></a></li>
     </ul>
@@ -43,7 +44,7 @@
         <span class="hero-utokyo-mark"></span>
         <span class="hero-utokyo-text">The University of Tokyo · 東京大学</span>
       </div>
-      <div class="hero-badge">Aizawa-Yamasaki-Matsui Lab · 相澤・山崎・松井研究室</div>
+      <a class="hero-badge" href="https://www.hal.t.u-tokyo.ac.jp/lab/ja/index_1.xhtml" target="_blank" rel="noopener">Aizawa-Yamasaki-Matsui Lab · 相澤・山崎・松井研究室 <span class="hero-badge-arrow">↗</span></a>
     </div>
     <h1 class="hero-title">
       <span class="hero-line">Manga</span>
@@ -97,12 +98,12 @@
   <div class="container">
     <div class="section-head">
       <span class="section-tag">01 / About</span>
-      <h2 class="section-title">A curated dataset<br>for manga research.</h2>
+      <h2 class="section-title">漫画研究のためのデータセット．</h2>
     </div>
     <div class="about-grid">
       <div class="about-text">
         <p>
-          このデータセット（<strong>Manga109</strong>）は，日本漫画のメディア処理の学術研究使用のために，東京大学 大学院情報理工学系研究科 電子情報学専攻 <strong>相澤・山崎・松井研究室</strong>によりとりまとめられました．
+          このデータセット（<strong>Manga109</strong>）は，日本漫画のメディア処理の学術研究使用のために，東京大学 大学院情報理工学系研究科 電子情報学専攻 <a href="https://www.hal.t.u-tokyo.ac.jp/lab/ja/index_1.xhtml" target="_blank" rel="noopener"><strong>相澤・山崎・松井研究室</strong></a>によりとりまとめられました．
         </p>
         <p>
           Manga109は，日本のプロの漫画家によって描かれた <strong>109冊の漫画</strong>で構成されています．1970年代から2010年代に公開された漫画であり，対象読者層やジャンルも幅広く網羅しています．収録されている漫画のほとんどは，<a href="http://www.mangaz.com/" target="_blank" rel="noopener">マンガ図書館Z</a>にて公開されています．
@@ -118,7 +119,6 @@
           <dt>Volumes</dt><dd>109 (Manga109) / 87 (Manga109-s)</dd>
           <dt>Period</dt><dd>1970s – 2010s</dd>
           <dt>Source</dt><dd>マンガ図書館Z</dd>
-          <dt>License</dt><dd>Academic (non-commercial)</dd>
         </dl>
         <a href="#download" class="card-cta">Request access →</a>
       </div>
@@ -148,7 +148,7 @@
   <div class="container">
     <div class="section-head">
       <span class="section-tag">02 / Us</span>
-      <h2 class="section-title">The people<br>behind Manga109.</h2>
+      <h2 class="section-title">運営メンバー．</h2>
     </div>
     <div class="team-intro">
       <p>
@@ -200,32 +200,166 @@
   <div class="container">
     <div class="section-head">
       <span class="section-tag">03 / Annotations</span>
-      <h2 class="section-title">Rich annotations<br>beyond raw images.</h2>
+      <h2 class="section-title">アノテーション．</h2>
     </div>
     <div class="feature-grid">
-      <article class="feature-card">
+      <article class="feature-card feature-card-expandable">
         <div class="feature-num">01</div>
         <h3>Manga109</h3>
         <p>キャラクター・顔・フレーム・テキストの<br>バウンディングボックスアノテーション．</p>
-        <span class="feature-pill">Core</span>
+        <div class="feature-footer">
+          <span class="feature-pill">Core</span>
+          <div class="feature-actions">
+            <button class="feature-toggle" aria-expanded="false" aria-controls="bib-manga109">
+              <span class="feature-toggle-label">BibTeX</span>
+              <svg class="feature-toggle-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="paper-group">
+              <a class="paper-seg paper-seg-first" href="https://ieeexplore.ieee.org/abstract/document/9069265/" target="_blank" rel="noopener">P'20 ↗</a>
+              <a class="paper-seg" href="https://link.springer.com/article/10.1007/s11042-016-4020-z" target="_blank" rel="noopener">P'17 ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="feature-bib" id="bib-manga109" hidden>
+          <div class="citation-entry">
+            <div class="citation-meta">
+              <span class="citation-venue">IEEE MultiMedia · 2020</span>
+              <button class="copy-btn" data-target="cite-1" aria-label="Copy BibTeX">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code id="cite-1">@article{multimedia_aizawa_2020,
+    author={Kiyoharu Aizawa and Azuma Fujimoto and Atsushi Otsubo and Toru Ogawa and Yusuke Matsui and Koki Tsubota and Hikaru Ikuta},
+    title={Building a Manga Dataset ``Manga109'' with Annotations for Multimedia Applications},
+    journal={IEEE MultiMedia},
+    volume={27},
+    number={2},
+    pages={8--18},
+    doi={10.1109/mmul.2020.2987895},
+    year={2020}
+}</code></pre>
+          </div>
+          <div class="citation-entry">
+            <div class="citation-meta">
+              <span class="citation-venue">MTAP · 2017</span>
+              <button class="copy-btn" data-target="cite-2" aria-label="Copy BibTeX">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code id="cite-2">@article{mtap_matsui_2017,
+    author={Yusuke Matsui and Kota Ito and Yuji Aramaki and Azuma Fujimoto and Toru Ogawa and Toshihiko Yamasaki and Kiyoharu Aizawa},
+    title={Sketch-based Manga Retrieval using Manga109 Dataset},
+    journal={Multimedia Tools and Applications},
+    volume={76},
+    number={20},
+    pages={21811--21838},
+    doi={10.1007/s11042-016-4020-z},
+    year={2017}
+}</code></pre>
+          </div>
+        </div>
       </article>
-      <article class="feature-card">
+
+      <article class="feature-card feature-card-expandable">
         <div class="feature-num">02</div>
         <h3>Comic Onomatopoeia</h3>
         <p>漫画のオノマトペ（擬音・擬態語）<br>専用のアノテーションデータセット．</p>
-        <span class="feature-pill">COO</span>
+        <div class="feature-footer">
+          <span class="feature-pill">COO</span>
+          <div class="feature-actions">
+            <button class="feature-toggle" aria-expanded="false" aria-controls="bib-coo">
+              <span class="feature-toggle-label">BibTeX</span>
+              <svg class="feature-toggle-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <a class="paper-btn" href="https://arxiv.org/abs/2207.04675" target="_blank" rel="noopener">Paper ↗</a>
+          </div>
+        </div>
+        <div class="feature-bib" id="bib-coo" hidden>
+          <div class="citation-entry">
+            <div class="citation-meta">
+              <span class="citation-venue">ECCV · 2022</span>
+              <button class="copy-btn" data-target="cite-3" aria-label="Copy BibTeX">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code id="cite-3">@inproceedings{baek2022COO,
+    title={COO: Comic Onomatopoeia Dataset for Recognizing Arbitrary or Truncated Texts},
+    author={Baek, Jeonghun and Matsui, Yusuke and Aizawa, Kiyoharu},
+    booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+    year={2022}
+}</code></pre>
+          </div>
+        </div>
       </article>
-      <article class="feature-card">
+
+      <article class="feature-card feature-card-expandable">
         <div class="feature-num">03</div>
         <h3>Manga109Dialog</h3>
         <p>漫画の発話者を特定した<br>セリフ・話者対応データセット．</p>
-        <span class="feature-pill">Dialog</span>
+        <div class="feature-footer">
+          <span class="feature-pill">Dialog</span>
+          <div class="feature-actions">
+            <button class="feature-toggle" aria-expanded="false" aria-controls="bib-dialog">
+              <span class="feature-toggle-label">BibTeX</span>
+              <svg class="feature-toggle-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <a class="paper-btn" href="https://arxiv.org/abs/2306.17469" target="_blank" rel="noopener">Paper ↗</a>
+          </div>
+        </div>
+        <div class="feature-bib" id="bib-dialog" hidden>
+          <div class="citation-entry">
+            <div class="citation-meta">
+              <span class="citation-venue">IEEE ICME · 2024</span>
+              <button class="copy-btn" data-target="cite-4" aria-label="Copy BibTeX">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code id="cite-4">@inproceedings{li2024manga109dialog,
+    title={Manga109Dialog: A Large-scale Dialogue Dataset for Comics Speaker Detection},
+    author={Li, Yingxuan and Aizawa, Kiyoharu and Matsui, Yusuke},
+    booktitle={Proceedings of the IEEE International Conference on Multimedia and Expo},
+    year={2024}
+}</code></pre>
+          </div>
+        </div>
       </article>
-      <article class="feature-card">
+
+      <article class="feature-card feature-card-expandable">
         <div class="feature-num">04</div>
-        <h3>MangaUB</h3>
-        <p>Manga Understanding Benchmark<br>for Large Multimodal Models.</p>
-        <span class="feature-pill">Benchmark</span>
+        <h3>MangaLMM &amp; MangaVQA</h3>
+        <p>漫画理解のための専用モデル（LMM）<br>と評価用VQAベンチマーク．</p>
+        <div class="feature-footer">
+          <span class="feature-pill">Model and Benchmark</span>
+          <div class="feature-actions">
+            <button class="feature-toggle" aria-expanded="false" aria-controls="bib-mangalmm">
+              <span class="feature-toggle-label">BibTeX</span>
+              <svg class="feature-toggle-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <a class="paper-btn" href="https://arxiv.org/abs/2505.20298" target="_blank" rel="noopener">Paper ↗</a>
+          </div>
+        </div>
+        <div class="feature-bib" id="bib-mangalmm" hidden>
+          <div class="citation-entry">
+            <div class="citation-meta">
+              <span class="citation-venue">EACL Findings · 2026</span>
+              <button class="copy-btn" data-target="cite-6" aria-label="Copy BibTeX">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code id="cite-6">@inproceedings{baek2026mangavqa,
+    title={Mangavqa and mangalmm: A benchmark and specialized model for multimodal manga understanding},
+    author={Baek, Jeonghun and Egashira, Kazuki and Onohara, Shota and Miyai, Atsuyuki and Imajuku, Yuki and Ikuta, Hikaru and Aizawa, Kiyoharu},
+    booktitle={Findings of the Association for Computational Linguistics: EACL 2026},
+    pages={5349--5370},
+    year={2026}
+}</code></pre>
+          </div>
+        </div>
       </article>
     </div>
   </div>
@@ -236,9 +370,13 @@
   <div class="container">
     <div class="section-head">
       <span class="section-tag">04 / News</span>
-      <h2 class="section-title">Latest updates.</h2>
+      <h2 class="section-title">お知らせ．</h2>
     </div>
     <ol class="news-list">
+      <li>
+        <time>2026.01</time>
+        <p>新しい論文 "<a href="https://arxiv.org/abs/2505.20298" target="_blank" rel="noopener">MangaVQA and MangaLMM</a>" が EACL Findings 2026 に採択されました．</p>
+      </li>
       <li>
         <time>2023.12</time>
         <p>一部破損画像が含まれていたため，これらを修正した改訂版を公開しました．</p>
@@ -271,13 +409,105 @@
   </div>
 </section>
 
+<!-- License -->
+<section id="license" class="section section-license">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">05 / License</span>
+      <h2 class="section-title">ライセンス．</h2>
+    </div>
+
+    <div class="license-card">
+      <div class="license-head">
+        <span class="license-badge">Manga109</span>
+        <p class="license-lede">
+          Manga109 データセット（以下「本データセット」と称する）に含まれる作品の利用は，画像の一部改変を含め，以下の条件の下で各作品の著者から許諾されています．本データセットは<strong>学術目的にのみ</strong>使用することができます．
+        </p>
+      </div>
+
+      <div class="license-section">
+        <h4>許諾される利用</h4>
+        <ul class="license-list">
+          <li>本データセットを用いた実験の実施．</li>
+          <li>本データセットに含まれる作品を学術論文の一部として印刷すること．</li>
+          <li>本データセットの作品を含む学術論文を，学術会議のデジタルライブラリなどのデジタルライブラリに登録すること．</li>
+          <li>学術研究成果の発表を目的としたデモ動画などのデジタルメディア内での利用．</li>
+        </ul>
+      </div>
+
+      <div class="license-section">
+        <h4>クレジット表記・制限事項</h4>
+        <p>本データセットの一部を第三者に再配布することは<strong>禁止</strong>されています．学術論文や動画内で本データセットの一部を使用する場合は，著者の使用許諾表示として <strong>"courtesy of [著者名]"</strong>（または <strong>"© [著者名]"</strong>）と明記し，本データセットから引用したことを記載してください．加えて，学術論文での使用にあたっては，以下に示す関連論文も引用してください．</p>
+      </div>
+
+      <div class="license-section">
+        <h4>免責事項</h4>
+        <p>いかなる場合においても，Manga109 データセットの配布者および Manga109 データセットに含まれる漫画作品の著者は，Manga109 データセットの使用に関するいかなる請求・損害・その他の責任を負いません．</p>
+      </div>
+
+      <div class="license-section">
+        <h4>Manga109 の入手方法</h4>
+        <p>データセットの使用目的の概要を添えて，私たちまでご連絡ください．その後，ダウンロードページのアドレスとパスワードをお送りします．</p>
+      </div>
+
+      <div class="license-section">
+        <h4>Manga109 の適正な利用</h4>
+        <p>Manga109 を利用する際は，以下のルールを厳守してください：</p>
+        <ol class="license-rules">
+          <li>本データセットは，<strong>非営利機関による学術目的</strong>でのみ使用できます．</li>
+          <li>データを<strong>第三者に譲渡しない</strong>でください．</li>
+          <li>学術論文や動画に漫画素材を含める際は，該当する著者名を <strong>"courtesy of [著者名]"</strong>（または <strong>"© [著者名]"</strong>）と記載してください．</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="license-card">
+      <div class="license-head">
+        <span class="license-badge license-badge-s">Manga109-s</span>
+        <p class="license-lede">
+          Manga109 データセットに含まれる作品のうち，<strong>87冊は以下の条件の下で営利利用が可能</strong>です．この特別なサブセットは <strong>Manga109-s データセット</strong>（以下「本データセット」と称する）として提供されます．
+        </p>
+      </div>
+
+      <div class="license-section">
+        <h4>許諾される利用</h4>
+        <ul class="license-list">
+          <li>機械学習や画像処理の実験のために Manga109-s データセットを使用すること．</li>
+          <li>本データセット内の漫画画像を学術論文に印刷すること．</li>
+          <li>本データセットの漫画画像を含む学術論文をデジタルライブラリに登録すること．</li>
+          <li>学術デモ動画やその他のデジタルメディア内で本データセット内の漫画画像を使用すること．</li>
+          <li>機械学習実験または画像処理実験から得られた結果，またはその一部を<strong>営利目的で利用</strong>すること．</li>
+        </ul>
+      </div>
+
+      <div class="license-section">
+        <h4>利用条件</h4>
+        <p>上記の利用は以下の条件の下で許可されます：</p>
+        <ol class="license-rules">
+          <li>Manga109-s データセットの<strong>第三者への再配布</strong>は<strong>禁止</strong>されています．</li>
+          <li>機械学習実験または画像処理実験から得られた結果（事前学習済みモデルを含む）を公開する際，Manga109-s データセットを使用したことを公開物内で<strong>明示</strong>してください．</li>
+          <li>本データセット内の漫画画像を，機械学習や画像処理実験の結果と<strong>共に販売</strong>することは<strong>禁止</strong>されています．</li>
+          <li>Manga109-s データセット内の漫画画像の直接的な複製や改変を，無料・有料を問わず<strong>製品として扱ってはいけません</strong>．</li>
+          <li>上記1〜5の利用において，研究開発成果の提示を目的としてデータセット内の漫画作品の全ページ（または全ページの改変）を公開する場合，公開するページ総数（改変を含む）は各作品（巻）の<strong>総ページ数の20%を超えてはいけません</strong>．いずれかの作品（巻）について20%を超える全ページまたは改変ページを公開することは<strong>禁止</strong>されています．</li>
+        </ol>
+      </div>
+
+      <div class="license-section">
+        <h4>クレジット表記・免責事項</h4>
+        <p>本データセットの第三者への再配布は禁止されています．学術論文や動画内で本データセットの一部を使用する場合は，著者の使用許諾表示として <strong>"courtesy of [著者名]"</strong>（または <strong>"© [著者名]"</strong>）と明記し，本データセットから引用したことを記載してください．加えて，学術論文での使用にあたっては，以下に示す関連論文も引用してください．</p>
+        <p>いかなる場合においても，Manga109-s データセットの配布者および Manga109-s データセットに含まれる漫画作品の著者は，Manga109-s データセットの使用に関するいかなる請求・損害・その他の責任を負いません．</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Download CTA -->
 <section id="download" class="section section-cta">
   <div class="container">
     <div class="cta-card">
       <div class="cta-left">
-        <span class="section-tag">05 / Get started</span>
-        <h2>Ready to dive into<br>109 volumes of manga?</h2>
+        <span class="section-tag">06 / Get started</span>
+        <h2>データセットのダウンロード．</h2>
         <p>研究用途に応じて Manga109 / Manga109-s をお選びください．</p>
       </div>
       <div class="cta-right">
@@ -290,6 +520,18 @@
           <div class="cta-btn-desc">営利利用可 · 87 volumes · Hugging Face</div>
         </a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Acknowledgement -->
+<section id="acknowledgement" class="section section-ack">
+  <div class="container">
+    <div class="ack-card">
+      <span class="section-tag">Acknowledgement</span>
+      <p>
+        Manga109 の作成にあたりご協力を頂いた<strong>赤松 健</strong>氏および各漫画の作者の方々へ感謝いたします．また，本データセットの構築にあたり，<strong>戦略的情報通信研究開発推進事業 SCOPE</strong> と <strong>科研費挑戦的研究（萌芽）</strong>の支援を受けました．
+      </p>
     </div>
   </div>
 </section>

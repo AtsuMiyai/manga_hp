@@ -1024,6 +1024,13 @@ html[lang="ja"] .paper-title {
   color: #fff;
   opacity: 1;
 }
+.paper-stack {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: stretch;
+}
+.paper-stack .paper-btn { width: 100%; justify-content: center; }
 /* Segmented Paper group (e.g., Manga109 with 2 papers) */
 .paper-group {
   display: inline-flex;

@@ -1781,6 +1781,25 @@ html[lang="ja"] .paper-title {
   background: var(--bg);
 }
 .section-anno-stats { background: var(--bg-soft); }
+.anno-hero-fig {
+  margin: 0 auto 56px;
+  max-width: 920px;
+  text-align: center;
+}
+.anno-hero-fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.18);
+}
+.anno-hero-fig figcaption {
+  margin-top: 14px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--fg-muted);
+}
 .anno-lead {
   max-width: 820px;
   color: var(--fg-dim);
